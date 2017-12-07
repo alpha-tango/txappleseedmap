@@ -14,6 +14,26 @@ L.TopoJSON = L.GeoJSON.extend({
     }
 });
 
+
+function myFunction() {
+    document.getElementById("dropdown-content").classList.toggle("hide");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.selector__header')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('hide')) {
+        openDropdown.classList.remove('hide');
+      }
+    }
+  }
+}
+
 var PageControl = (function(){
     "use strict";
 
